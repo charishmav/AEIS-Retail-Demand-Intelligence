@@ -1,0 +1,4 @@
+model,MAE,RMSE
+Baseline,145,430
+XGBoost,109.11,362.51
+Prophet,128,390
