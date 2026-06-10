@@ -2,9 +2,9 @@
 
 ## Overview
 
-AEIS is an end-to-end AI-powered retail demand intelligence platform designed to forecast sales, generate business insights, explain predictions, and support future planning.
+AEIS is an end-to-end AI-powered retail demand intelligence platform designed to forecast demand, generate business insights, explain model decisions, and support future planning.
 
-The system combines machine learning, explainable AI, forecasting, API serving, and interactive dashboards into a production-style workflow.
+The platform combines machine learning, explainability, forecasting, API serving, and interactive analytics into a production-style workflow.
 
 ---
 
@@ -12,74 +12,124 @@ The system combines machine learning, explainable AI, forecasting, API serving, 
 
 * Retail Demand Prediction
 * Batch CSV Prediction
-* Feature Engineering Pipeline
+* Automated Feature Engineering
 * Explainable AI (SHAP)
 * Future Forecasting (Prophet)
 * Model Comparison Dashboard
 * FastAPI Prediction API
-* Streamlit Analytics Dashboard
+* Streamlit Dashboard
+* Forecast Analytics
 
 ---
 
 ## Tech Stack
 
-* Python
+### Machine Learning
+
 * XGBoost
 * Prophet
 * SHAP
-* FastAPI
-* Streamlit
-* Pandas
 * Scikit-learn
+
+### Backend
+
+* FastAPI
+* Uvicorn
+
+### Dashboard
+
+* Streamlit
+
+### Data
+
+* Pandas
+* NumPy
 
 ---
 
 ## Architecture
 
-Data
-→ Feature Engineering
-→ XGBoost Training
-→ Prediction API
-→ Dashboard
-→ Forecasting
-→ Explainability
+Data Collection
+↓
+Preprocessing & Feature Engineering
+↓
+Model Training (XGBoost + Prophet)
+↓
+Prediction API
+↓
+Dashboard Analytics
+↓
+Forecasting
+↓
+Explainability
 
 ---
 
 ## Project Structure
 
 AEIS/
-├── dashboard/
+
 ├── api/
-├── src/
+│   └── app.py
+
+├── dashboard/
+│   └── app.py
+
 ├── models/
+│   ├── model_metrics.csv
+│   └── shap_summary.png
+
+├── src/
+│   ├── preprocessing/
+│   ├── training/
+│   ├── forecasting/
+│   ├── explainability/
+│   └── inference/
+
 ├── requirements.txt
+
+├── README.md
+
+└── .gitignore
 
 ---
 
-## Run Locally
+## Installation
 
-Install:
+Clone repository:
+
+git clone https://github.com/charishmav/AEIS-Retail-Demand-Intelligence.git
+
+Move into project:
+
+cd AEIS-Retail-Demand-Intelligence
+
+Create environment:
+
+python -m venv venv
+
+Activate:
+
+venv/bin/activate
+
+Install dependencies:
 
 pip install -r requirements.txt
 
-Run Dashboard:
+---
+
+## Run Dashboard
 
 streamlit run dashboard/app.py
 
-Run API:
+---
+
+## Run API
 
 uvicorn api.app:app --reload
 
 ---
 
-## Future Improvements
-
-* Multi-dataset support
-* Automated schema detection
-* LSTM forecasting
-* Cloud deployment
-* Monitoring
 
 ---
 
