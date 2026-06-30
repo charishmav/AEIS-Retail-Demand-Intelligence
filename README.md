@@ -66,7 +66,7 @@ Explainability
 ---
 
 ## Project Structure
-
+```
 AEIS/
 
 ├── api/
@@ -91,7 +91,7 @@ AEIS/
 ├── README.md
 
 └── .gitignore
-
+```
 ---
 
 ## Installation
